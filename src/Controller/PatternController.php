@@ -17,6 +17,8 @@ class PatternController extends AbstractController
 {
     /**
      * @Route("/", name="pattern_index", methods={"GET"})
+     * @param PatternRepository $patternRepository
+     * @return Response
      */
     public function index(PatternRepository $patternRepository): Response
     {
@@ -27,6 +29,8 @@ class PatternController extends AbstractController
 
     /**
      * @Route("/new", name="pattern_new", methods={"GET","POST"})
+     * @param Request $request
+     * @return Response
      */
     public function new(Request $request): Response
     {
@@ -50,6 +54,8 @@ class PatternController extends AbstractController
 
     /**
      * @Route("/{id}", name="pattern_show", methods={"GET"})
+     * @param Pattern $pattern
+     * @return Response
      */
     public function show(Pattern $pattern): Response
     {
@@ -60,6 +66,9 @@ class PatternController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="pattern_edit", methods={"GET","POST"})
+     * @param Request $request
+     * @param Pattern $pattern
+     * @return Response
      */
     public function edit(Request $request, Pattern $pattern): Response
     {
@@ -80,6 +89,9 @@ class PatternController extends AbstractController
 
     /**
      * @Route("/{id}", name="pattern_delete", methods={"DELETE"})
+     * @param Request $request
+     * @param Pattern $pattern
+     * @return Response
      */
     public function delete(Request $request, Pattern $pattern): Response
     {

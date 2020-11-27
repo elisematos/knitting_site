@@ -25,10 +25,6 @@ class Pattern
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Veuillez renseigner un nom")
-     * @Assert\Type(
-     *     type="string",
-     *     message="Le nom du projet doit être une chaîne de caractères"
-     * )
      * @Assert\Regex(
      *     pattern="/\d/",
      *     match=false,
@@ -62,7 +58,6 @@ class Pattern
 
     /**
      * @ORM\Column(type="datetime")
-     * @Assert\Date
      */
     private $createdAt;
 
@@ -75,6 +70,7 @@ class Pattern
 
     /**
      * @ORM\ManyToMany(targetEntity=Yarn::class, mappedBy="patterns")
+     * @ORM\JoinTable(name="yarn_pattern")
      * @Assert\NotBlank(message="Veuillez sélectionner un ou plusieurs fils.")
      */
     private $yarns;
