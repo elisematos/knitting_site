@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Yarn{% endblock %}
+
+{% block body %}
+    <h1>Edit Yarn</h1>
+
+    {{ include('yarn/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('yarn_index') }}">back to list</a>
+
+    {{ include('yarn/_delete_form.html.twig') }}
+{% endblock %}
