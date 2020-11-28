@@ -5,7 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PatternController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PatternController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Pattern.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Pattern.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Yarn.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Yarn.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/PatternType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PatternType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pattern/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pattern/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +146,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606495453965</updated>
       <workItem from="1606495455065" duration="10739000" />
-      <workItem from="1606507402323" duration="1592000" />
+      <workItem from="1606507402323" duration="15419000" />
     </task>
     <task id="LOCAL-00001" summary="Entities Brand, Category, Pattern and Yarn created with their relations&#10;CRUD Pattern">
       <created>1606501967963</created>
@@ -152,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606501967963</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="PatternType.php functionnal">
+      <created>1606509053231</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606509053231</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,17 +170,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Entities Brand, Category, Pattern and Yarn created with their relations&#10;CRUD Pattern" />
-    <option name="LAST_COMMIT_MESSAGE" value="Entities Brand, Category, Pattern and Yarn created with their relations&#10;CRUD Pattern" />
+    <MESSAGE value="PatternType.php functionnal" />
+    <option name="LAST_COMMIT_MESSAGE" value="PatternType.php functionnal" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1230" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606503836878">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1230" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606503836878" />
-    <state x="-1335" y="116" key="CommitChangelistDialog2" timestamp="1606501967584">
+    <state x="-1335" y="116" key="CommitChangelistDialog2" timestamp="1606509052655">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1335" y="116" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606501967584" />
+    <state x="-1335" y="116" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606509052655" />
     <state x="-1180" y="294" key="FileChooserDialogImpl" timestamp="1606506915162">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>

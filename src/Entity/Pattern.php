@@ -69,8 +69,7 @@ class Pattern
     private $category;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Yarn::class, mappedBy="patterns")
-     * @ORM\JoinTable(name="yarn_pattern")
+     * @ORM\ManyToMany(targetEntity=Yarn::class, inversedBy="patterns")
      * @Assert\NotBlank(message="Veuillez sélectionner un ou plusieurs fils.")
      */
     private $yarns;
@@ -78,10 +77,7 @@ class Pattern
     public function __construct()
     {
         $this->yarns = new ArrayCollection();
-        try {
-            $this->createdAt = new \DateTime('now');
-        } catch (\Exception $e) {
-        }
+        $this->createdAt = new \DateTime();
     }
 
     public function getId(): ?int

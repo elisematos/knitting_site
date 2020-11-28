@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Pattern;
+use App\Entity\Yarn;
 use App\Form\PatternType;
 use App\Repository\PatternRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

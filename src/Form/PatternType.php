@@ -51,8 +51,8 @@ class PatternType extends AbstractType
                 'choice_label' => 'name',
                 'expanded' => true,
                 'multiple' => true,
-                'query_builder' => function (YarnRepository $yarnRepository) {
-                    return $yarnRepository->createQueryBuilder('y')
+                'query_builder' => function (YarnRepository $repo) {
+                    return $repo->createQueryBuilder('y')
                         ->orderBy('y.name', 'ASC');
                 },
             ])

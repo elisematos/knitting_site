@@ -46,7 +46,7 @@ class Yarn
     private $weight;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Pattern::class, inversedBy="yarns")
+     * @ORM\ManyToMany(targetEntity=Pattern::class, mappedBy="yarns")
      */
     private $patterns;
 
