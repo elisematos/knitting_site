@@ -8,6 +8,7 @@ use App\Entity\Yarn;
 use App\Form\PatternType;
 use App\Repository\PatternRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -42,6 +43,20 @@ class PatternController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $pdfFile = $form->get('pdf')->getData();
+            if ($pdfFile) {
+                $originalFilename = pathinfo($pdfFile->getClientOriginalName(), PATHINFO_FILENAME);
+                $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
+                $newFilename = $safeFilename.'-'.uniqid().'.'.$pdfFile->guessExtension();
+                try {
+                    $pdfFile->move(
+                        $this->getParameter('pdf_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                }
+                $pattern->setPdfFilename($newFilename);
+            }
             //Get uploaded images
             $images = $form->get('images')->getData();
             //Loop through images

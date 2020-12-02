@@ -2,15 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e5a88a0-1269-495c-8f03-8ac9fb5d8ff4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/js/images.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201127172027.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201127182822.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201128163643.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201202135927.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201202141209.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201202145312.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201202145532.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201202151827.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/1c455103c38b60e568b75a777ea92b6f.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/4cc5df23c18a81bce6347663e524263f.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/720d43600e040c9f62cd6b721b78c681.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/a0c36752dc45e3a7b75401767e7be7e0.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/b6c1e8ff54b7978be330e9555d51ef47.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/c0ba8d08c97ab3c8f5ad516c3e97b2f4.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PatternController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PatternController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Pattern.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Pattern.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/PatternType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PatternType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pattern/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pattern/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pattern/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/yarn/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/yarn/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +42,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -159,7 +177,8 @@
       <workItem from="1606658077380" duration="9770000" />
       <workItem from="1606728988279" duration="11307000" />
       <workItem from="1606813240954" duration="4120000" />
-      <workItem from="1606906084678" duration="17951000" />
+      <workItem from="1606906084678" duration="19968000" />
+      <workItem from="1606942197366" duration="6040000" />
     </task>
     <task id="LOCAL-00001" summary="Entities Brand, Category, Pattern and Yarn created with their relations&#10;CRUD Pattern">
       <created>1606501967963</created>
@@ -196,34 +215,52 @@
       <option name="project" value="LOCAL" />
       <updated>1606907656411</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add Image entity with ManyToOne relationship with Pattern entity&#10;CRUD Image">
+      <created>1606937725353</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1606937725353</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Entities Brand, Category, Pattern and Yarn created with their relations&#10;CRUD Pattern" />
     <MESSAGE value="PatternType.php functionnal" />
     <MESSAGE value="CRUD Yarn.php, Brand.php et Category.php" />
     <MESSAGE value="Navbar Homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Navbar Homepage" />
+    <MESSAGE value="Add Image entity with ManyToOne relationship with Pattern entity&#10;CRUD Image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Image entity with ManyToOne relationship with Pattern entity&#10;CRUD Image" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606582755063">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1230" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606944587879">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1230" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606503836878" />
+    <state x="-1230" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606944587879" />
     <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606582755063" />
-    <state x="585" y="116" key="CommitChangelistDialog2" timestamp="1606907655717">
+    <state x="585" y="116" key="CommitChangelistDialog2" timestamp="1606937724855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1335" y="116" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606509052655" />
-    <state x="585" y="116" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606907655717" />
-    <state x="-1180" y="294" key="FileChooserDialogImpl" timestamp="1606916397868">
+    <state x="585" y="116" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606937724855" />
+    <state x="-1180" y="294" key="FileChooserDialogImpl" timestamp="1606944510007">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1180" y="294" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606916397868" />
+    <state x="-1180" y="294" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606944510007" />
     <state x="740" y="294" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606912625682" />
     <state x="-1087" y="436" key="Github.ShareDialog" timestamp="1606497804751">
       <screen x="-1920" y="0" width="1920" height="1040" />

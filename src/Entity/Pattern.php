@@ -6,6 +6,7 @@ use App\Repository\PatternRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use PhpParser\Node\Scalar\String_;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
@@ -79,6 +80,10 @@ class Pattern
      */
     private $images;
 
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $pdfFilename;
 
     public function __construct()
     {
@@ -148,6 +153,18 @@ class Pattern
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getPdfFilename(): ?String
+    {
+        return $this->pdfFilename;
+    }
+
+    public function setPdfFilename(?String $pdfFilename)
+    {
+        $this->pdfFilename = $pdfFilename;
 
         return $this;
     }

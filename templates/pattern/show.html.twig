@@ -7,6 +7,8 @@
     <ul>
         <li>{{ pattern.description }}</li>
         <li>Difficulty : {{ pattern.difficulty }}</li>
+        <li><a href="{{ asset('uploads/pdf/' ~ pattern.pdfFilename) }}" target="_blank">Patron (PDF)</a>
+        </li>
     </ul>
     {% for yarn in pattern.yarns %}
         <p>{{ yarn.name }}</p>
