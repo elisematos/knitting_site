@@ -11,12 +11,14 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/yarn")
+ * @Route("/admin/yarn")
  */
 class YarnController extends AbstractController
 {
     /**
      * @Route("/", name="yarn_index", methods={"GET"})
+     * @param YarnRepository $yarnRepository
+     * @return Response
      */
     public function index(YarnRepository $yarnRepository): Response
     {
@@ -27,6 +29,8 @@ class YarnController extends AbstractController
 
     /**
      * @Route("/new", name="yarn_new", methods={"GET","POST"})
+     * @param Request $request
+     * @return Response
      */
     public function new(Request $request): Response
     {
@@ -50,6 +54,8 @@ class YarnController extends AbstractController
 
     /**
      * @Route("/{id}", name="yarn_show", methods={"GET"})
+     * @param Yarn $yarn
+     * @return Response
      */
     public function show(Yarn $yarn): Response
     {
@@ -60,6 +66,9 @@ class YarnController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="yarn_edit", methods={"GET","POST"})
+     * @param Request $request
+     * @param Yarn $yarn
+     * @return Response
      */
     public function edit(Request $request, Yarn $yarn): Response
     {
@@ -80,6 +89,9 @@ class YarnController extends AbstractController
 
     /**
      * @Route("/{id}", name="yarn_delete", methods={"DELETE"})
+     * @param Request $request
+     * @param Yarn $yarn
+     * @return Response
      */
     public function delete(Request $request, Yarn $yarn): Response
     {

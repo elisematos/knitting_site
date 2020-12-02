@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Pattern;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\NonUniqueResultException;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -19,32 +20,33 @@ class PatternRepository extends ServiceEntityRepository
         parent::__construct($registry, Pattern::class);
     }
 
-    // /**
-    //  * @return Pattern[] Returns an array of Pattern objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    /**
+     * @return Pattern[] Returns an array of Pattern objects
+     */
+
+    public function findFourLatestPatterns()
     {
         return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
+            ->orderBy('p.createdAt', 'DESC')
+            ->setMaxResults(4)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
+    /**
+     * @param $category
+     * @return Pattern[] Returns an array of Pattern objects
+     */
+    public function findLatestPatternByCategory($category)
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.category = :val')
+            ->setParameter('val', $category)
+            ->orderBy('p.createdAt', 'DESC')
+            ->setMaxResults(1)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?Pattern
-    {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }

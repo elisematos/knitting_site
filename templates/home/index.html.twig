@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    </div>
+    <h2 class="text-center text-uppercase font-weight-bold">derniers patrons</h2>
+    <div class="py-5">
+    <div class="container-fluid">
+    {% if latestPatterns %}
+        <div class="row hidden-md-up">
+            {% for pattern in latestPatterns %}
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ pattern.category.name }} {{ pattern.name }}</h5>
+                            <a href="{{  path("pattern_show", {'id': pattern.id}) }}" class="btn btn-dark">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        </div>
+        </div>
+    {% else %}
+        <p>Aucun patron retrouvé</p>
+    {% endif %}
+    <div class="py-5">
+        <div class="container-fluid">
+            <div class="row hidden-md-up">
+                {% if latestHatPattern is not empty %}
+                    <div class="col-md-3">
+                        <h2 class="font-weight-bold">BONNETS</h2>
+                        {{ latestHatPattern[0].name }}
+                    </div>
+                {% endif %}
+                {% if latestSweaterPattern is not empty %}
+                    <div class="col-md-3">
+                        <h2 class="font-weight-bold">PULLS</h2>
+                        {{ latestSweaterPattern[0].name }}
+                    </div>
+                {% endif %}
+                {% if latestSockPattern is not empty %}
+                    <div class="col-md-3">
+                        <h2 class="font-weight-bold">CHAUSSETTES</h2>
+                        {{ latestSockPattern[0].name }}
+                    </div>
+                {% endif %}
+                {% if latestScarfPattern is not empty %}
+                    <div class="col-md-3">
+                        <h2 class="font-weight-bold">ECHARPES</h2>
+                        {{ latestScarfPattern[0].name }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

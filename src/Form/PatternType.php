@@ -24,7 +24,7 @@ class PatternType extends AbstractType
                 'label' => 'Nom',
                 'help' => 'Un nom de moins de 20 charactères sans chiffre.'
             ])
-            ->add('description', TextareaType::class, [
+            ->add('Description', TextareaType::class, [
                 'label' => 'Description'
             ])
             ->add('difficulty', RangeType::class, [

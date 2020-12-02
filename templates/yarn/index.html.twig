@@ -1,37 +1,37 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Yarn index{% endblock %}
+{% block title %}Liste des fils{% endblock %}
 
 {% block body %}
-    <h1>Yarn index</h1>
-
-    <table class="table">
-        <thead>
+    <h1>Liste des fils</h1>
+    <a class="btn btn-primary" href="{{ path('yarn_new') }}">Ajouter un nouveau fil</a>
+    {% if yarns %}
+        <table class="table table-striped">
+            <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Weight</th>
-                <th>actions</th>
+                <th>Nom</th>
+                <th>Actions</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for yarn in yarns %}
-            <tr>
-                <td>{{ yarn.id }}</td>
-                <td>{{ yarn.name }}</td>
-                <td>{{ yarn.weight }}</td>
-                <td>
-                    <a href="{{ path('yarn_show', {'id': yarn.id}) }}">show</a>
-                    <a href="{{ path('yarn_edit', {'id': yarn.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="4">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('yarn_new') }}">Create new</a>
+            </thead>
+            <tbody>
+            {% for yarn in yarns %}
+                <tr>
+                    <td>{{ yarn.brand.name }} | {{ yarn.name }}</td>
+                    <td>
+                        <a href="{{ path('yarn_edit', {'id': yarn.id}) }}" class="btn btn-dark">Editer</a>
+                        <form method="post"
+                              action="{{ path('yarn_delete', {'id': yarn.id}) }}"
+                              onsubmit="return confirm('Voulez-vous réellement supprimer cet élément?');">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ yarn.id) }}">
+                            <button class="btn btn-danger">Supprimer</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Aucun fil retrouvé</p>
+    {% endif %}
 {% endblock %}

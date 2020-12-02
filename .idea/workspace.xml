@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e5a88a0-1269-495c-8f03-8ac9fb5d8ff4" name="Default Changelist" comment="">
+    <list default="true" id="7e5a88a0-1269-495c-8f03-8ac9fb5d8ff4" name="Default Changelist" comment="CRUD Yarn.php, Brand.php et Category.php">
+      <change afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BrandController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BrandController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PatternController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PatternController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Pattern.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Pattern.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Yarn.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Yarn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/YarnController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/YarnController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/BrandType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/BrandType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CategoryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CategoryType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/PatternType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PatternType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pattern/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pattern/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/YarnType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/YarnType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PatternRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PatternRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/brand/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/brand/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pattern/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/yarn/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/yarn/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/yarn/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/yarn/show.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +160,11 @@
       <option name="presentableId" value="Default" />
       <updated>1606495453965</updated>
       <workItem from="1606495455065" duration="10739000" />
-      <workItem from="1606507402323" duration="15419000" />
+      <workItem from="1606507402323" duration="24998000" />
+      <workItem from="1606658077380" duration="9770000" />
+      <workItem from="1606728988279" duration="11307000" />
+      <workItem from="1606813240954" duration="4120000" />
+      <workItem from="1606906084678" duration="610000" />
     </task>
     <task id="LOCAL-00001" summary="Entities Brand, Category, Pattern and Yarn created with their relations&#10;CRUD Pattern">
       <created>1606501967963</created>
@@ -162,7 +180,21 @@
       <option name="project" value="LOCAL" />
       <updated>1606509053231</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="CRUD Yarn.php, Brand.php et Category.php">
+      <created>1606582531019</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606582531019</updated>
+    </task>
+    <task id="LOCAL-00004" summary="CRUD Yarn.php, Brand.php et Category.php">
+      <created>1606582565674</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606582565674</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,17 +203,20 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Entities Brand, Category, Pattern and Yarn created with their relations&#10;CRUD Pattern" />
     <MESSAGE value="PatternType.php functionnal" />
-    <option name="LAST_COMMIT_MESSAGE" value="PatternType.php functionnal" />
+    <MESSAGE value="CRUD Yarn.php, Brand.php et Category.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="CRUD Yarn.php, Brand.php et Category.php" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1230" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606503836878">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606582755063">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1230" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606503836878" />
-    <state x="-1335" y="116" key="CommitChangelistDialog2" timestamp="1606509052655">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606582755063" />
+    <state x="585" y="116" key="CommitChangelistDialog2" timestamp="1606583973629">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1335" y="116" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606509052655" />
+    <state x="585" y="116" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606583973629" />
     <state x="-1180" y="294" key="FileChooserDialogImpl" timestamp="1606506915162">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>

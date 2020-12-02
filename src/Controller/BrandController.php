@@ -11,12 +11,14 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/brand")
+ * @Route("/admin/brand")
  */
 class BrandController extends AbstractController
 {
     /**
      * @Route("/", name="brand_index", methods={"GET"})
+     * @param BrandRepository $brandRepository
+     * @return Response
      */
     public function index(BrandRepository $brandRepository): Response
     {
@@ -27,6 +29,8 @@ class BrandController extends AbstractController
 
     /**
      * @Route("/new", name="brand_new", methods={"GET","POST"})
+     * @param Request $request
+     * @return Response
      */
     public function new(Request $request): Response
     {
@@ -50,6 +54,8 @@ class BrandController extends AbstractController
 
     /**
      * @Route("/{id}", name="brand_show", methods={"GET"})
+     * @param Brand $brand
+     * @return Response
      */
     public function show(Brand $brand): Response
     {
@@ -60,6 +66,9 @@ class BrandController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="brand_edit", methods={"GET","POST"})
+     * @param Request $request
+     * @param Brand $brand
+     * @return Response
      */
     public function edit(Request $request, Brand $brand): Response
     {
@@ -80,6 +89,9 @@ class BrandController extends AbstractController
 
     /**
      * @Route("/{id}", name="brand_delete", methods={"DELETE"})
+     * @param Request $request
+     * @param Brand $brand
+     * @return Response
      */
     public function delete(Request $request, Brand $brand): Response
     {

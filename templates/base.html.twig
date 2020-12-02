@@ -1,11 +1,40 @@
+{% set route_name = app.request.attributes.get('_route') %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+              integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+              crossorigin="anonymous"
+        >
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{{ path('home') }}">Knitting_site</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav mr-auto">
+                <li {% if route_name == "pattern_index" %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+                    <a class="nav-link" href="{{ path('pattern_index') }}">Patrons</a>
+                </li>
+                <li {% if route_name == "category_index" %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+                    <a class="nav-link" href="{{ path('category_index') }}">Catégories</a>
+                </li>
+                <li {% if route_name == "yarn_index" %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+                    <a class="nav-link" href="{{ path('yarn_index') }}">Fils</a>
+                </li>
+                <li {% if route_name == "brand_index" %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+                    <a class="nav-link" href="{{ path('brand_index') }}">Marques</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

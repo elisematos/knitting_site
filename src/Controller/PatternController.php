@@ -29,7 +29,7 @@ class PatternController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="pattern_new", methods={"GET","POST"})
+     * @Route("/admin/new", name="pattern_new", methods={"GET","POST"})
      * @param Request $request
      * @return Response
      */
@@ -66,7 +66,7 @@ class PatternController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="pattern_edit", methods={"GET","POST"})
+     * @Route("/admin/{id}/edit", name="pattern_edit", methods={"GET","POST"})
      * @param Request $request
      * @param Pattern $pattern
      * @return Response
@@ -89,7 +89,7 @@ class PatternController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="pattern_delete", methods={"DELETE"})
+     * @Route("/admin/{id}", name="pattern_delete", methods={"DELETE"})
      * @param Request $request
      * @param Pattern $pattern
      * @return Response
