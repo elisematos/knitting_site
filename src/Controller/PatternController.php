@@ -2,11 +2,13 @@
 
 namespace App\Controller;
 
+use App\Entity\Image;
 use App\Entity\Pattern;
 use App\Entity\Yarn;
 use App\Form\PatternType;
 use App\Repository\PatternRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -40,6 +42,23 @@ class PatternController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            //Get uploaded images
+            $images = $form->get('images')->getData();
+            //Loop through images
+            foreach($images as $image)
+            {
+                //Generate a new fileName
+                $file = md5(uniqid()) . '.' . $image->guessExtension();
+                //Save the file in the uploads directory
+                $image->move(
+                    $this->getParameter('images_directory'),
+                    $file
+                );
+                //Save the image name in the database
+                $img = new Image();
+                $img->setName($file);
+                $pattern->addImage($img);
+            }
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($pattern);
             $entityManager->flush();
@@ -77,6 +96,23 @@ class PatternController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            //Get uploaded images
+            $images = $form->get('images')->getData();
+            //Loop through images
+            foreach($images as $image)
+            {
+                //Generate a new fileName
+                $file = md5(uniqid()) . '.' . $image->guessExtension();
+                //Save the file in the uploads directory
+                $image->move(
+                    $this->getParameter('images_directory'),
+                    $file
+                );
+                //Save the image name in the database
+                $img = new Image();
+                $img->setName($file);
+                $pattern->addImage($img);
+            }
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('pattern_index');
@@ -103,5 +139,32 @@ class PatternController extends AbstractController
         }
 
         return $this->redirectToRoute('pattern_index');
+    }
+
+    /**
+     * @Route("/delete/image{id}", name="pattern_delete_image", methods={"DELETE"})
+     * @param Image $image
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function deleteImage(Image $image, Request $request)
+    {
+        $data = json_decode($request->getContent(), true);
+        //Valid token check
+        if($this->isCsrfTokenValid('delete'.$image->getId(), $data['_token']))
+        {
+            //Get image name
+            $name = $image->getName();
+            //Delete file from uploads directory
+            unlink($this->getParameter('images_directory').'/'.$name);
+            //Delete database entry
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($image);
+            $em->flush();
+            //Json response
+            return new JsonResponse(['success' => 1]);
+        } else {
+            return new JsonResponse(['error' => 'Token Invalide'], 401);
+        }
     }
 }

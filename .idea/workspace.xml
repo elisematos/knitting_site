@@ -1,28 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e5a88a0-1269-495c-8f03-8ac9fb5d8ff4" name="Default Changelist" comment="CRUD Yarn.php, Brand.php et Category.php">
-      <change afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+    <list default="true" id="7e5a88a0-1269-495c-8f03-8ac9fb5d8ff4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/js/images.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/BrandController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BrandController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PatternController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PatternController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/YarnController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/YarnController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/BrandType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/BrandType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CategoryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CategoryType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Pattern.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Pattern.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/PatternType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PatternType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/YarnType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/YarnType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PatternRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PatternRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/brand/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/brand/show.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/category/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/category/show.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pattern/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/yarn/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/yarn/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/yarn/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/yarn/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pattern/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pattern/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/edit.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +20,13 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -147,7 +142,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blog" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -164,7 +159,7 @@
       <workItem from="1606658077380" duration="9770000" />
       <workItem from="1606728988279" duration="11307000" />
       <workItem from="1606813240954" duration="4120000" />
-      <workItem from="1606906084678" duration="610000" />
+      <workItem from="1606906084678" duration="17951000" />
     </task>
     <task id="LOCAL-00001" summary="Entities Brand, Category, Pattern and Yarn created with their relations&#10;CRUD Pattern">
       <created>1606501967963</created>
@@ -194,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606582565674</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Navbar Homepage">
+      <created>1606907656411</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606907656411</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +206,8 @@
     <MESSAGE value="Entities Brand, Category, Pattern and Yarn created with their relations&#10;CRUD Pattern" />
     <MESSAGE value="PatternType.php functionnal" />
     <MESSAGE value="CRUD Yarn.php, Brand.php et Category.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="CRUD Yarn.php, Brand.php et Category.php" />
+    <MESSAGE value="Navbar Homepage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Navbar Homepage" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606582755063">
@@ -212,15 +215,16 @@
     </state>
     <state x="-1230" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606503836878" />
     <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606582755063" />
-    <state x="585" y="116" key="CommitChangelistDialog2" timestamp="1606583973629">
+    <state x="585" y="116" key="CommitChangelistDialog2" timestamp="1606907655717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1335" y="116" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606509052655" />
-    <state x="585" y="116" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606583973629" />
-    <state x="-1180" y="294" key="FileChooserDialogImpl" timestamp="1606506915162">
+    <state x="585" y="116" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606907655717" />
+    <state x="-1180" y="294" key="FileChooserDialogImpl" timestamp="1606916397868">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1180" y="294" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606506915162" />
+    <state x="-1180" y="294" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606916397868" />
+    <state x="740" y="294" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606912625682" />
     <state x="-1087" y="436" key="Github.ShareDialog" timestamp="1606497804751">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
