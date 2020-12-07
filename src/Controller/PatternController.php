@@ -77,6 +77,7 @@ class PatternController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($pattern);
             $entityManager->flush();
+            $this->addFlash('success', 'Nouveau patron ajouté au catalogue avec succès.');
 
             return $this->redirectToRoute('pattern_index');
         }
@@ -129,6 +130,7 @@ class PatternController extends AbstractController
                 $pattern->addImage($img);
             }
             $this->getDoctrine()->getManager()->flush();
+            $this->addFlash('success', 'Les modifications apportées ont été enregistrées avec succès.');
 
             return $this->redirectToRoute('pattern_index');
         }
@@ -151,6 +153,7 @@ class PatternController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($pattern);
             $entityManager->flush();
+            $this->addFlash('success', 'Patron supprimé du catalogue avec succès.');
         }
 
         return $this->redirectToRoute('pattern_index');

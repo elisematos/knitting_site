@@ -1,16 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Pattern{% endblock %}
+{% block title %}Patron {{ pattern.category.name }} {{ pattern.name }}{% endblock %}
 
 {% block body %}
-    <h1>{{ pattern.category.name }} {{ pattern.name }}</h1>
-    <ul>
-        <li>{{ pattern.description }}</li>
-        <li>Difficulty : {{ pattern.difficulty }}</li>
-        <li><a href="{{ asset('uploads/pdf/' ~ pattern.pdfFilename) }}" target="_blank">Patron (PDF)</a>
-        </li>
-    </ul>
-    {% for yarn in pattern.yarns %}
-        <p>{{ yarn.name }}</p>
-    {% endfor %}
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <div class="col-sm-6">
+                <div class="card">
+                {% for image in pattern.images %}
+                    <img src="{{ asset('/uploads/images/' ~ image.name) }}" alt="Image" class="d-block">
+                {% endfor %}
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ pattern.category.name }} {{ pattern.name }}</h3>
+                        <p class="card-text">
+                            {{ pattern.description }}
+                        </p>
+                            <a href="{{ asset('uploads/pdf/' ~ pattern.pdfFilename) }}" target="_blank">
+                                <img src="/uploads/icons/iconfinder_27_Pdf_File_Type_Adobe_4518956.png" alt="pdf_icon" width="50">
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

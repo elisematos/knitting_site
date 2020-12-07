@@ -1,16 +1,44 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Pattern index{% endblock %}
+{% block title %}Catalogue des patrons{% endblock %}
 
 {% block body %}
-    <a class="btn btn-dark" href="{{ path('pattern_new') }}">Ajouter un nouveau patron</a>
-    <h1>Pattern index</h1>
+    <div class="p-5">
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">{{ message }}</div>
+        {% endfor %}
+        <a class="btn btn-info" href="{{ path('pattern_new') }}">Ajouter un nouveau patron</a>
+        {% if patterns %}
+            <div class="mt-5 container-fluid">
+                <div class="row">
+                    {% for pattern in patterns %}
+                    <div class="col-sm-6 col-md-3 col-lg-3">
 
-    {% for pattern in patterns %}
-        <a href="{{ path('pattern_show', {'id': pattern.id}) }}">{{ pattern.name }}</a>
-        <a href="{{ path('pattern_edit', {'id': pattern.id}) }}">Editer</a>
-        {{ include('pattern/_delete_form.html.twig') }}
-    {% else %}
-        Aucun patron retrouvé
-    {% endfor %}
+                <div class="card text-center">
+                    <a style="color:black; text-underline-style: none" href="{{ path('pattern_show', {'id': pattern.id}) }}">
+                        {% for image in pattern.images %}
+                            {% if loop.first %}
+                                <img src="{{ asset('uploads/images/' ~ image.name) }}"
+                                     class="card-img-top"
+                                     alt="#">
+                            {% endif %}
+                        {% endfor %}
+                    </a>
+                        <div class="card-body ">
+                                <h3 class="card-title">{{ pattern.category.name }} {{ pattern.name }}</h3>
+                                {{ include('pattern/_delete_form.html.twig') }}
+                                <a href="{{ path('pattern_edit', {'id': pattern.id}) }}">
+                                    <img src="/uploads/icons/pencil.png" alt="delete_icon" width="25">
+                                </a>
+                        </div>
+                </div>
+
+                </div>
+                    {% endfor %}
+            </div>
+            </div>
+        {% else %}
+            <p>Aucun patron à afficher</p>
+        {% endif %}
+    </div>
 {% endblock %}

@@ -1,11 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Pattern{% endblock %}
+{% block title %}Nouveau patron{% endblock %}
 
 {% block body %}
-    <h1>Create new Pattern</h1>
+    <h1 class="text-center text-bold">Ajouter un patron</h1>
 
     {{ include('pattern/_form.html.twig') }}
 
-    <a href="{{ path('pattern_index') }}">back to list</a>
 {% endblock %}

@@ -4,7 +4,7 @@
 
 {% block body %}
     <h1>Liste des fils</h1>
-    <a class="btn btn-dark" href="{{ path('yarn_new') }}">Ajouter un nouveau fil</a>
+    <a class="btn btn-dark" href="{{ path('yarn_new') }}">Ajouter</a>
     {% if yarns %}
         <table class="table table-striped">
             <thead>
@@ -16,16 +16,9 @@
             <tbody>
             {% for yarn in yarns %}
                 <tr>
-                    <td>{{ yarn.brand.name }} | {{ yarn.name }}</td>
+                    <td>{{ yarn.name }}</td>
                     <td>
-                        <a href="{{ path('yarn_edit', {'id': yarn.id}) }}" class="btn btn-dark">Editer</a>
-                        <form method="post"
-                              action="{{ path('yarn_delete', {'id': yarn.id}) }}"
-                              onsubmit="return confirm('Voulez-vous réellement supprimer cet élément?');">
-                            <input type="hidden" name="_method" value="DELETE">
-                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ yarn.id) }}">
-                            <button class="btn btn-danger">Supprimer</button>
-                        </form>
+                        {{ include('yarn/_delete_form.html.twig') }}
                     </td>
                 </tr>
             {% endfor %}

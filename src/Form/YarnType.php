@@ -23,11 +23,6 @@ class YarnType extends AbstractType
                 'label' => 'Catégorie',
                 'choices' => Yarn::YARN_WEIGHT
             ])
-            ->add('brand', EntityType::class,[
-                'label' => 'Marque',
-                'class' => Brand::class,
-                'choice_label' => 'name'
-                ])
         ;
     }
 

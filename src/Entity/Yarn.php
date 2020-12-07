@@ -17,13 +17,13 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 class Yarn
 {
     const YARN_WEIGHT = [
-        'Superfine' => 'Superfine',
-        'Fine' => 'Fine',
-        'Légère' => 'Légère',
-        'Moyenne' => 'Moyenne',
-        'Epaisse' => 'Epaisse',
-        'Très épaisse' => 'Très épaisse',
-        'Géante' => 'Géante'
+        'Superfine' => 1,
+        'Fine' => 2,
+        'Légère' => 3,
+        'Moyenne' => 4,
+        'Epaisse' => 5,
+        'Très épaisse' => 6,
+        'Géante' => 7
     ];
 
     /**
@@ -49,12 +49,6 @@ class Yarn
      * @ORM\ManyToMany(targetEntity=Pattern::class, mappedBy="yarns")
      */
     private $patterns;
-
-    /**
-     * @ORM\ManyToOne(targetEntity=Brand::class, inversedBy="yarns")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $brand;
 
     public function __construct()
     {

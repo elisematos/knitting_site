@@ -1,18 +1,34 @@
-{{ form_start(form) }}
+<div class="container mx-10 px-5 py-5 my-10 border border-light rounded-lg">
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col-md-4">{{ form_row(form.name) }}</div>
+        <div class="col-md-4">{{ form_row(form.category) }}</div>
+        <div class="col-md-4">{{ form_row(form.difficulty) }}</div>
+    </div>
+    <div class="row">
+        <div class="col">{{ form_row(form.description) }}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">{{ form_row(form.yarns) }}</div>
+        <div class="col-md-4">{{ form_row(form.pdf) }}</div>
+        <div class="col-md-4">{{ form_row(form.images) }}</div>
+    </div>
     {{ form_widget(form) }}
 
-{# if route = "pattern_edit" => display images #}
-{%  if app.request.attributes.get('_route') == 'pattern_edit' %}
-    <h2>Images</h2>
-    {% for image in pattern.images %}
-        <div>
-            <img src="{{ asset('/uploads/' ~ image.name) }}" alt="Image" width="150">
-            <a href="{{ path('pattern_delete_image', {'id': image.id}) }}"
-               data-delete data-token="{{ csrf_token('delete' ~ image.id) }}">
-                Supprimer
-            </a>
-        </div>
-    {% endfor %}
-{% endif %}
-<button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+    {# if route = "pattern_edit" => display images #}
+    {%  if app.request.attributes.get('_route') == 'pattern_edit' %}
+        <h2>Images</h2>
+        {% for image in pattern.images %}
+            <div>
+                <img src="{{ asset('/uploads/images/' ~ image.name) }}" alt="Image" width="150">
+                <a href="{{ path('pattern_delete_image', {'id': image.id}) }}"
+                   data-delete data-token="{{ csrf_token('delete' ~ image.id) }}">
+                    <img src="/uploads/icons/delete.png" alt="delete_icon" width="25">
+                </a>
+            </div>
+        {% endfor %}
+    {% endif %}
+    <button class="btn btn-success">{{ button_label|default('ENREGISTRER') }}</button>
+    {{ form_end(form) }}
+</div>
+

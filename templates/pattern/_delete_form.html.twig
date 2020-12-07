@@ -1,5 +1,6 @@
-<form method="post" action="{{ path('pattern_delete', {'id': pattern.id}) }}" onsubmit="return confirm('Voulez-vous réellement supprimer cet élément?');">
+<form method="post" action="{{ path('pattern_delete', {'id': pattern.id}) }}"
+      onsubmit="return confirm('Voulez-vous réellement supprimer cet élément?');">
     <input type="hidden" name="_method" value="DELETE">
     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ pattern.id) }}">
-    <button class="btn btn-danger">Supprimer</button>
+    <button class="btn"><img src="/uploads/icons/delete.png" alt="delete_icon" width="25"></button>
 </form>

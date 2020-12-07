@@ -27,7 +27,7 @@ class PatternType extends AbstractType
                 'label' => 'Nom',
                 'help' => 'Un nom de moins de 20 charactères sans chiffre.'
             ])
-            ->add('Description', TextareaType::class, [
+            ->add('description', TextareaType::class, [
                 'label' => 'Description'
             ])
             ->add('difficulty', RangeType::class, [
@@ -35,12 +35,14 @@ class PatternType extends AbstractType
                 'attr' => [
                     'min' => 1,
                     'max' => 5
-                ]
+                ],
+                'help' =>''
             ])
             ->add('category', EntityType::class, [
                 'label' => 'Catégorie',
                 'class' => Category::class,
                 'help' => 'Sélectionner une catégorie',
+                'placeholder' => false,
                 'choice_label' => 'name',
                 'query_builder' => function (CategoryRepository $categoryRepository) {
                     return $categoryRepository->createQueryBuilder('c')
@@ -60,7 +62,9 @@ class PatternType extends AbstractType
                 },
             ])
             ->add('pdf', FileType::class, [
-                'label' => 'Patron (fichier PDF)',
+                'label' => false,
+                'attr' => [
+                    'placeholder' => 'Patron au format pdf'],
                 'mapped' => false,
                 'required' => false,
                 'constraints' => [
@@ -76,6 +80,8 @@ class PatternType extends AbstractType
             ])
             ->add('images', FileType::class, [
                 'label' => false,
+                'attr' => [
+                    'placeholder' => 'Images'],
                 'multiple' => true,
                 'mapped' => false,
                 'required' => false,

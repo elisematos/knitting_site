@@ -35,14 +35,14 @@ class PatternRepository extends ServiceEntityRepository
     }
 
     /**
-     * @param $category
+     * @param $categoryId
      * @return Pattern[] Returns an array of Pattern objects
      */
-    public function findLatestPatternByCategory($category)
+    public function findLatestPatternByCategory($categoryId)
     {
         return $this->createQueryBuilder('p')
             ->andWhere('p.category = :val')
-            ->setParameter('val', $category)
+            ->setParameter('val', $categoryId)
             ->orderBy('p.createdAt', 'DESC')
             ->setMaxResults(1)
             ->getQuery()

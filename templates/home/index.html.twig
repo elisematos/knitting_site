@@ -3,7 +3,7 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-    </div>
+    <div class="m-5">
     <h2 class="text-center text-uppercase font-weight-bold">derniers patrons</h2>
     <div class="py-5">
     <div class="container-fluid">
@@ -11,10 +11,18 @@
         <div class="row hidden-md-up">
             {% for pattern in latestPatterns %}
                 <div class="col-md-3">
-                    <div class="card">
+                    <div class="card text-center border-light bg-transparent">
                         <div class="card-body">
                             <h5 class="card-title">{{ pattern.category.name }} {{ pattern.name }}</h5>
-                            <a href="{{  path("pattern_show", {'id': pattern.id}) }}" class="btn btn-dark">Découvrir</a>
+                            <a href="{{ path('pattern_show', {'id': pattern.id}) }}">
+                                {% for image in pattern.images %}
+                                    {% if loop.first %}
+                                        <img src="{{ asset('/uploads/images/' ~ image.name) }}"
+                                             class="d-block w-100 rounded-lg"
+                                             alt="#">
+                                    {% endif %}
+                                {% endfor %}
+                            </a>
                         </div>
                     </div>
                 </div>

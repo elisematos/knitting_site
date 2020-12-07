@@ -2,28 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e5a88a0-1269-495c-8f03-8ac9fb5d8ff4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/uploads/icons/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/icons/iconfinder_27_Pdf_File_Type_Adobe_4518956.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/icons/pencil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/category/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/yarn/_delete_form.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201127172027.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201127182822.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201128163643.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202135927.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202141209.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202145312.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202145532.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201202151827.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/1c455103c38b60e568b75a777ea92b6f.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/4cc5df23c18a81bce6347663e524263f.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/720d43600e040c9f62cd6b721b78c681.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/a0c36752dc45e3a7b75401767e7be7e0.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/b6c1e8ff54b7978be330e9555d51ef47.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/c0ba8d08c97ab3c8f5ad516c3e97b2f4.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BrandController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PatternController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PatternController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Pattern.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Pattern.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Brand.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Yarn.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Yarn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/BrandType.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/PatternType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PatternType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/YarnType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/YarnType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/BrandRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PatternRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PatternRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/brand/_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/brand/edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/brand/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/brand/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pattern/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pattern/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pattern/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pattern/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pattern/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pattern/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/yarn/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/yarn/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/yarn/edit.html.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/yarn/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/yarn/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/yarn/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/yarn/new.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +179,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\wild\knitting_site\public\uploads\icons" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -178,7 +198,11 @@
       <workItem from="1606728988279" duration="11307000" />
       <workItem from="1606813240954" duration="4120000" />
       <workItem from="1606906084678" duration="19968000" />
-      <workItem from="1606942197366" duration="6040000" />
+      <workItem from="1606942197366" duration="6791000" />
+      <workItem from="1606994319115" duration="8098000" />
+      <workItem from="1607017685100" duration="12591000" />
+      <workItem from="1607101556359" duration="7301000" />
+      <workItem from="1607347887212" duration="5362000" />
     </task>
     <task id="LOCAL-00001" summary="Entities Brand, Category, Pattern and Yarn created with their relations&#10;CRUD Pattern">
       <created>1606501967963</created>
@@ -222,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606937725353</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add pattern pdf">
+      <created>1606949700272</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606949700272</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +275,8 @@
     <MESSAGE value="CRUD Yarn.php, Brand.php et Category.php" />
     <MESSAGE value="Navbar Homepage" />
     <MESSAGE value="Add Image entity with ManyToOne relationship with Pattern entity&#10;CRUD Image" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Image entity with ManyToOne relationship with Pattern entity&#10;CRUD Image" />
+    <MESSAGE value="Add pattern pdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add pattern pdf" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1230" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606944587879">
@@ -252,16 +284,16 @@
     </state>
     <state x="-1230" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606944587879" />
     <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606582755063" />
-    <state x="585" y="116" key="CommitChangelistDialog2" timestamp="1606937724855">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1335" y="116" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606509052655" />
-    <state x="585" y="116" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606937724855" />
-    <state x="-1180" y="294" key="FileChooserDialogImpl" timestamp="1606944510007">
+    <state x="-1335" y="116" key="CommitChangelistDialog2" timestamp="1606949699396">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1180" y="294" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606944510007" />
-    <state x="740" y="294" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606912625682" />
+    <state x="-1335" y="116" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1606949699396" />
+    <state x="585" y="116" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606937724855" />
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1607348370157">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1180" y="294" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1607021127497" />
+    <state x="740" y="294" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607348370157" />
     <state x="-1087" y="436" key="Github.ShareDialog" timestamp="1606497804751">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
