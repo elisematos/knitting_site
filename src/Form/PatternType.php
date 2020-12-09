@@ -10,6 +10,7 @@ use App\Repository\CategoryRepository;
 use App\Repository\YarnRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\RangeType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -30,13 +31,9 @@ class PatternType extends AbstractType
             ->add('description', TextareaType::class, [
                 'label' => 'Description'
             ])
-            ->add('difficulty', RangeType::class, [
+            ->add('skillLevel', ChoiceType::class, [
                 'label' => 'Niveau de difficulté',
-                'attr' => [
-                    'min' => 1,
-                    'max' => 5
-                ],
-                'help' =>''
+                'choices' => Pattern::SKILL_LEVEL
             ])
             ->add('category', EntityType::class, [
                 'label' => 'Catégorie',

@@ -7,13 +7,36 @@
         {% for message in app.flashes('success') %}
             <div class="alert alert-success">{{ message }}</div>
         {% endfor %}
-        <a class="btn btn-info" href="{{ path('pattern_new') }}">Ajouter un nouveau patron</a>
+        <div class="jumbotron bg-dark">
+            <div class="container">
+                {{ form_start(form) }}
+                <div class="form-row align-items-end">
+                    <div class="col-md-6 col-lg-3">
+                        {{ form_row(form.keyWord) }}
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        {{ form_row(form.category) }}
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        {{ form_row(form.skillLevel) }}
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="form-group">
+                        <button class="btn btn-dark">Rechercher</button>
+                        </div>
+                    </div>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+        {% if is_granted('ROLE_ADMIN') %}
+        <a class="btn btn-light" href="{{ path('pattern_new') }}"><img src="{{ asset('uploads/icons/add.png') }}" width="50" alt="add icon">Ajouter un patron</a>
+        {% endif %}
         {% if patterns %}
             <div class="mt-5 container-fluid">
                 <div class="row">
                     {% for pattern in patterns %}
                     <div class="col-sm-6 col-md-3 col-lg-3">
-
                 <div class="card text-center">
                     <a style="color:black; text-underline-style: none" href="{{ path('pattern_show', {'id': pattern.id}) }}">
                         {% for image in pattern.images %}
@@ -26,10 +49,12 @@
                     </a>
                         <div class="card-body ">
                                 <h3 class="card-title">{{ pattern.category.name }} {{ pattern.name }}</h3>
+                            {% if is_granted('ROLE_ADMIN') %}
                                 {{ include('pattern/_delete_form.html.twig') }}
                                 <a href="{{ path('pattern_edit', {'id': pattern.id}) }}">
-                                    <img src="/uploads/icons/pencil.png" alt="delete_icon" width="25">
+                                    <img src="{{ asset('uploads/icons/pencil.png') }}" alt="delete_icon" width="25">
                                 </a>
+                            {% endif %}
                         </div>
                 </div>
 

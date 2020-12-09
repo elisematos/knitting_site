@@ -23,12 +23,16 @@
                 <li {% if route_name == "pattern_index" %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
                     <a class="nav-link" href="{{ path('pattern_index') }}">Patrons</a>
                 </li>
-                <li {% if route_name == "category_index" %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+                {% if is_granted('ROLE_ADMIN') %}
+                <li {% if route_name == "category_index" %} class="nav-item dropdown active" {% else %} class="nav-item dropdown" {% endif %}>
                     <a class="nav-link" href="{{ path('category_index') }}">Catégories</a>
                 </li>
+                {% endif %}
+                {% if is_granted('ROLE_ADMIN') %}
                 <li {% if route_name == "yarn_index" %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
                     <a class="nav-link" href="{{ path('yarn_index') }}">Fils</a>
                 </li>
+                {% endif %}
             </ul>
         </div>
     </nav>

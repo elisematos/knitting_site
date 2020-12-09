@@ -12,10 +12,20 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=PatternRepository::class)
+ * @ORM\Table(name="pattern",
+ *     indexes={@ORM\Index(name="search_pattern", columns={"name", "description"}, flags={"fulltext"})})
  * @UniqueEntity("name")
  */
 class Pattern
 {
+    const SKILL_LEVEL = [
+        'Débutant' => 1,
+        'Facile' => 2,
+        'Intermédiaire' => 3,
+        'Qualifié' => 4,
+        'Expert' => 5
+    ];
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -55,7 +65,7 @@ class Pattern
      *     notInRangeMessage = "Le niveau de difficulté doit êtr compris entre {{ min }} et {{ max }}.",
      * )
      */
-    private $difficulty;
+    private $skillLevel;
 
     /**
      * @ORM\Column(type="datetime")
@@ -121,14 +131,14 @@ class Pattern
         return $this;
     }
 
-    public function getDifficulty(): ?int
+    public function getSkillLevel(): ?int
     {
-        return $this->difficulty;
+        return $this->skillLevel;
     }
 
-    public function setDifficulty(int $difficulty): self
+    public function setSkillLevel(int $skillLevel): self
     {
-        $this->difficulty = $difficulty;
+        $this->skillLevel = $skillLevel;
 
         return $this;
     }

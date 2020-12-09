@@ -4,8 +4,11 @@ namespace App\Controller;
 
 use App\Entity\Image;
 use App\Entity\Pattern;
+use App\Entity\PatternSearch;
 use App\Entity\Yarn;
+use App\Form\PatternSearchType;
 use App\Form\PatternType;
+use App\Form\SearchPatternType;
 use App\Repository\PatternRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
@@ -13,6 +16,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 /**
  * @Route("/pattern")
@@ -22,17 +26,31 @@ class PatternController extends AbstractController
     /**
      * @Route("/", name="pattern_index", methods={"GET"})
      * @param PatternRepository $patternRepository
+     * @param Request $request
      * @return Response
      */
-    public function index(PatternRepository $patternRepository): Response
+    public function index(PatternRepository $patternRepository, Request $request): Response
     {
+        $patterns = $patternRepository->findPatternsByDateDESC();
+        $form = $this->createForm(SearchPatternType::class);
+        $search = $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()) {
+            //Search patterns containing key words
+            $patterns = $patternRepository->search(
+                $search->get('keyWord')->getData(),
+                $search->get('category')->getData(),
+                $search->get('skillLevel')->getData()
+            );
+        }
         return $this->render('pattern/index.html.twig', [
-            'patterns' => $patternRepository->findAll(),
+            'patterns' => $patterns,
+            'form' => $form->createView()
         ]);
     }
 
     /**
-     * @Route("/admin/new", name="pattern_new", methods={"GET","POST"})
+     * @IsGranted("ROLE_ADMIN")
+     * @Route("/new", name="pattern_new", methods={"GET","POST"})
      * @param Request $request
      * @return Response
      */
@@ -101,7 +119,8 @@ class PatternController extends AbstractController
     }
 
     /**
-     * @Route("/admin/{id}/edit", name="pattern_edit", methods={"GET","POST"})
+     * @IsGranted("ROLE_ADMIN")
+     * @Route("/{id}/edit", name="pattern_edit", methods={"GET","POST"})
      * @param Request $request
      * @param Pattern $pattern
      * @return Response
@@ -142,7 +161,8 @@ class PatternController extends AbstractController
     }
 
     /**
-     * @Route("/admin/{id}", name="pattern_delete", methods={"DELETE"})
+     * @IsGranted("ROLE_ADMIN")
+     * @Route("/{id}", name="pattern_delete", methods={"DELETE"})
      * @param Request $request
      * @param Pattern $pattern
      * @return Response
@@ -160,6 +180,7 @@ class PatternController extends AbstractController
     }
 
     /**
+     * @IsGranted("ROLE_ADMIN")
      * @Route("/delete/image{id}", name="pattern_delete_image", methods={"DELETE"})
      * @param Image $image
      * @param Request $request

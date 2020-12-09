@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Pattern;
+use App\Entity\PatternSearch;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\NonUniqueResultException;
 use Doctrine\Persistence\ManagerRegistry;
@@ -21,10 +22,11 @@ class PatternRepository extends ServiceEntityRepository
     }
 
     /**
+     * Find the four newest patterns
      * @return Pattern[] Returns an array of Pattern objects
      */
 
-    public function findFourLatestPatterns()
+    public function findFourLatestPatterns(): array
     {
         return $this->createQueryBuilder('p')
             ->orderBy('p.createdAt', 'DESC')
@@ -35,18 +37,45 @@ class PatternRepository extends ServiceEntityRepository
     }
 
     /**
-     * @param $categoryId
+     * Find all published patterns and order them by publication date with newest patterns first.
      * @return Pattern[] Returns an array of Pattern objects
      */
-    public function findLatestPatternByCategory($categoryId)
+    public function findPatternsByDateDESC(): array
     {
         return $this->createQueryBuilder('p')
-            ->andWhere('p.category = :val')
-            ->setParameter('val', $categoryId)
             ->orderBy('p.createdAt', 'DESC')
-            ->setMaxResults(1)
             ->getQuery()
             ->getResult()
-        ;
+            ;
+    }
+
+    /**
+     * Search patterns through SearchPatternType form
+     * @param null $keyWord
+     * @param null $category
+     * @param null $skillLevel
+     * @param null $yarnWeight
+     * @return int|mixed|string
+     */
+    public function search($keyWord = null, $category = null, $skillLevel = null, $yarnWeight = null){
+        $query = $this->createQueryBuilder('p');
+        if($keyWord != null){
+            $query
+                ->andWhere('MATCH_AGAINST(p.name, p.description) AGAINST
+                (:keyWord boolean)>0')
+                ->setParameter('keyWord', $keyWord);
+        }
+        if($category != null){
+            $query
+                ->leftJoin('p.category', 'c')
+                ->andWhere('c.id = :id')
+                ->setParameter('id', $category);
+        }
+        if($skillLevel != null){
+            $query
+                ->andWhere('p.skillLevel = :skillLevel')
+                ->setParameter('skillLevel', $skillLevel);
+        }
+        return $query->getQuery()->getResult();
     }
 }

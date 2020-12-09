@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef8b3223e261d45972f67ca25427187e",
+    "content-hash": "ed15471e677a0e7675c53701dcbe1a08",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -5395,16 +5395,16 @@
         },
         {
             "name": "symfony/security-bundle",
-            "version": "v5.1.8",
+            "version": "v5.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-bundle.git",
-                "reference": "8921cdb1057f615b8340a352195f4a684c876893"
+                "reference": "1060810a1dc7361304c50d4aa2569fe5b4da60c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/8921cdb1057f615b8340a352195f4a684c876893",
-                "reference": "8921cdb1057f615b8340a352195f4a684c876893",
+                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/1060810a1dc7361304c50d4aa2569fe5b4da60c6",
+                "reference": "1060810a1dc7361304c50d4aa2569fe5b4da60c6",
                 "shasum": ""
             },
             "require": {
@@ -5472,7 +5472,7 @@
             "description": "Symfony SecurityBundle",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/security-bundle/tree/v5.1.8"
+                "source": "https://github.com/symfony/security-bundle/tree/v5.1.9"
             },
             "funding": [
                 {
@@ -5488,7 +5488,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-24T12:01:57+00:00"
+            "time": "2020-11-01T15:43:26+00:00"
         },
         {
             "name": "symfony/security-core",
@@ -7842,7 +7842,9 @@
     "platform": {
         "php": ">=7.2.5",
         "ext-ctype": "*",
-        "ext-iconv": "*"
+        "ext-iconv": "*",
+        "ext-intl": "*",
+        "ext-json": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
