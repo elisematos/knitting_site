@@ -20,21 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e5a88a0-1269-495c-8f03-8ac9fb5d8ff4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/icons/logout-24.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PatternController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PatternController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Yarn.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Yarn.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/PatternType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PatternType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/SearchPatternType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SearchPatternType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/YarnType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/YarnType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PatternRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PatternRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/AppAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/AppAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pattern/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/_form.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +189,7 @@
       <workItem from="1607414981663" duration="11642000" />
       <workItem from="1607435211342" duration="6834000" />
       <workItem from="1607503314598" duration="14952000" />
-      <workItem from="1607589469335" duration="11943000" />
+      <workItem from="1607589469335" duration="12978000" />
     </task>
     <task id="LOCAL-00001" summary="Entities Brand, Category, Pattern and Yarn created with their relations&#10;CRUD Pattern">
       <created>1606501967963</created>
@@ -260,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607543746342</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add redirection to pattern_index on logout + home&#10;CSS Nav">
+      <created>1607610474488</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607610474488</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +290,7 @@
     <MESSAGE value="Add Image entity with ManyToOne relationship with Pattern entity&#10;CRUD Image" />
     <MESSAGE value="Add pattern pdf" />
     <MESSAGE value="Add PatternSearchType fields : keyWord, category, skillLevel&#10;Add Administration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add PatternSearchType fields : keyWord, category, skillLevel&#10;Add Administration" />
+    <MESSAGE value="Add redirection to pattern_index on logout + home&#10;CSS Nav" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add redirection to pattern_index on logout + home&#10;CSS Nav" />
   </component>
 </project>
