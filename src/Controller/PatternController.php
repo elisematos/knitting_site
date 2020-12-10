@@ -4,9 +4,6 @@ namespace App\Controller;
 
 use App\Entity\Image;
 use App\Entity\Pattern;
-use App\Entity\PatternSearch;
-use App\Entity\Yarn;
-use App\Form\PatternSearchType;
 use App\Form\PatternType;
 use App\Form\SearchPatternType;
 use App\Repository\PatternRepository;
@@ -19,6 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 /**
+ *
  * @Route("/pattern")
  */
 class PatternController extends AbstractController
@@ -64,7 +62,10 @@ class PatternController extends AbstractController
             $pdfFile = $form->get('pdf')->getData();
             if ($pdfFile) {
                 $originalFilename = pathinfo($pdfFile->getClientOriginalName(), PATHINFO_FILENAME);
-                $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
+                $safeFilename = transliterator_transliterate(
+                    'Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()',
+                    $originalFilename
+                );
                 $newFilename = $safeFilename.'-'.uniqid().'.'.$pdfFile->guessExtension();
                 try {
                     $pdfFile->move(

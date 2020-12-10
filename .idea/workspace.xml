@@ -20,32 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e5a88a0-1269-495c-8f03-8ac9fb5d8ff4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201208095135.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/icons/add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Extensions/Doctrine/MatchAgainst.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/AdminRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Security/AppAuthenticator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/icons/logout-24.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/icons/iconfinder_27_Pdf_File_Type_Adobe_4518956.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/icons/pdf.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PatternController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PatternController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Pattern.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Pattern.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Yarn.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Yarn.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/PatternType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PatternType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/SearchPatternType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SearchPatternType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/YarnType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/YarnType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/PatternRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PatternRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/AppAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/AppAuthenticator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pattern/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pattern/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/yarn/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/yarn/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +201,8 @@
       <workItem from="1607347887212" duration="5362000" />
       <workItem from="1607414981663" duration="11642000" />
       <workItem from="1607435211342" duration="6834000" />
-      <workItem from="1607503314598" duration="14661000" />
+      <workItem from="1607503314598" duration="14952000" />
+      <workItem from="1607589469335" duration="11943000" />
     </task>
     <task id="LOCAL-00001" summary="Entities Brand, Category, Pattern and Yarn created with their relations&#10;CRUD Pattern">
       <created>1606501967963</created>
@@ -263,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606949700272</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add PatternSearchType fields : keyWord, category, skillLevel&#10;Add Administration">
+      <created>1607543746342</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607543746342</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +295,7 @@
     <MESSAGE value="Navbar Homepage" />
     <MESSAGE value="Add Image entity with ManyToOne relationship with Pattern entity&#10;CRUD Image" />
     <MESSAGE value="Add pattern pdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add pattern pdf" />
+    <MESSAGE value="Add PatternSearchType fields : keyWord, category, skillLevel&#10;Add Administration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add PatternSearchType fields : keyWord, category, skillLevel&#10;Add Administration" />
   </component>
 </project>

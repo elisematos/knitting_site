@@ -107,16 +107,4 @@ class Yarn
 
         return $this;
     }
-
-    public function getBrand(): ?Brand
-    {
-        return $this->brand;
-    }
-
-    public function setBrand(?Brand $brand): self
-    {
-        $this->brand = $brand;
-
-        return $this;
-    }
 }

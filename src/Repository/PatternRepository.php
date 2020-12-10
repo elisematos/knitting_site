@@ -3,9 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Pattern;
-use App\Entity\PatternSearch;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\ORM\NonUniqueResultException;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**

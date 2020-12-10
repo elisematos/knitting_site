@@ -39,13 +39,13 @@ class AppAuthenticator extends AbstractFormLoginAuthenticator implements Passwor
         $this->passwordEncoder = $passwordEncoder;
     }
 
-    public function supports(Request $request)
+    public function supports(Request $request): bool
     {
         return self::LOGIN_ROUTE === $request->attributes->get('_route')
             && $request->isMethod('POST');
     }
 
-    public function getCredentials(Request $request)
+    public function getCredentials(Request $request): array
     {
         $credentials = [
             'username' => $request->request->get('username'),
@@ -77,7 +77,7 @@ class AppAuthenticator extends AbstractFormLoginAuthenticator implements Passwor
         return $user;
     }
 
-    public function checkCredentials($credentials, UserInterface $user)
+    public function checkCredentials($credentials, UserInterface $user): bool
     {
         return $this->passwordEncoder->isPasswordValid($user, $credentials['password']);
     }
@@ -92,7 +92,7 @@ class AppAuthenticator extends AbstractFormLoginAuthenticator implements Passwor
         return $credentials['password'];
     }
 
-    public function onAuthenticationSuccess(Request $request, TokenInterface $token, string $providerKey)
+    public function onAuthenticationSuccess(Request $request, TokenInterface $token, string $providerKey): RedirectResponse
     {
         $targetPath = $this->getTargetPath($request->getSession(), $providerKey);
         if ($targetPath) {
@@ -101,7 +101,7 @@ class AppAuthenticator extends AbstractFormLoginAuthenticator implements Passwor
         return new RedirectResponse($this->urlGenerator->generate('pattern_index'));
     }
 
-    protected function getLoginUrl()
+    protected function getLoginUrl(): string
     {
         return $this->urlGenerator->generate(self::LOGIN_ROUTE);
     }
