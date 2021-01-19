@@ -39,7 +39,7 @@ class Pattern
      * @Assert\Regex(
      *     pattern="/\d/",
      *     match=false,
-     *     message="Le nom ne peut contenir un chiffre.",
+     *     message="Le nom ne peut contenir un chiffre",
      *     htmlPattern = false
      * )
      * @Assert\Length(
@@ -59,11 +59,6 @@ class Pattern
     /**
      * @ORM\Column(type="integer")
      * @Assert\NotBlank(message="Veuillez renseigner le niveau de difficulté")
-     * @Assert\Range(
-     *     min = 1,
-     *     max = 5,
-     *     notInRangeMessage = "Le niveau de difficulté doit êtr compris entre {{ min }} et {{ max }}.",
-     * )
      */
     private $skillLevel;
 
@@ -75,18 +70,19 @@ class Pattern
     /**
      * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="patterns")
      * @ORM\JoinColumn(nullable=false)
-     * @Assert\NotBlank(message="Veuillez sélectionner une catégorie.")
+     * @Assert\NotBlank(message="Veuillez sélectionner une catégorie")
      */
     private $category;
 
     /**
      * @ORM\ManyToMany(targetEntity=Yarn::class, inversedBy="patterns")
-     * @Assert\NotBlank(message="Veuillez sélectionner un ou plusieurs fils.")
+     * @Assert\NotBlank(message="Veuillez sélectionner un ou plusieurs fils")
      */
     private $yarns;
 
     /**
      * @ORM\OneToMany(targetEntity=Image::class, mappedBy="pattern", orphanRemoval=true, cascade={"persist"})
+     * @Assert\NotBlank(message="Veuillez associer une ou plusieurs images")
      */
     private $images;
 
@@ -172,7 +168,7 @@ class Pattern
         return $this->pdfFilename;
     }
 
-    public function setPdfFilename(?String $pdfFilename)
+    public function setPdfFilename(?String $pdfFilename): Pattern
     {
         $this->pdfFilename = $pdfFilename;
 

@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Pattern;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\Query;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -20,30 +21,14 @@ class PatternRepository extends ServiceEntityRepository
     }
 
     /**
-     * Find the four newest patterns
-     * @return Pattern[] Returns an array of Pattern objects
-     */
-
-    public function findFourLatestPatterns(): array
-    {
-        return $this->createQueryBuilder('p')
-            ->orderBy('p.createdAt', 'DESC')
-            ->setMaxResults(4)
-            ->getQuery()
-            ->getResult()
-            ;
-    }
-
-    /**
      * Find all published patterns and order them by publication date with newest patterns first.
-     * @return Pattern[] Returns an array of Pattern objects
+     * @return Query Returns an array of Pattern objects
      */
-    public function findPatternsByDateDESC(): array
+    public function findPatternsByDateDESCQuery(): Query
     {
         return $this->createQueryBuilder('p')
             ->orderBy('p.createdAt', 'DESC')
             ->getQuery()
-            ->getResult()
             ;
     }
 

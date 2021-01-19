@@ -3,9 +3,8 @@
 {% block title %}Nouveau fil{% endblock %}
 
 {% block body %}
-    <h1>Ajouter un fil</h1>
-
-    {{ include('yarn/_form.html.twig') }}
-
-    <a href="{{ path('yarn_index') }}">Retour</a>
+    <div class="p-5">
+        <h1 class="text-center text-md-left">nouveau fil</h1>
+        {{ include('yarn/_form.html.twig') }}
+    </div>
 {% endblock %}

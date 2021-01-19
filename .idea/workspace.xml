@@ -20,8 +20,111 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e5a88a0-1269-495c-8f03-8ac9fb5d8ff4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/controllers.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/controllers/hello_controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/assets.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/knp_paginator.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/prod/webpack_encore.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/test/webpack_encore.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/createNotFoundException(rt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/icons/instagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/icons/logout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/0054f5613aa3e16d912003f8f30104b6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/0674e1eec04c0878f669ad5449a46a21.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/1014a02f5eefec747e3afbe1cbeb0e1b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/1904bc929bfb580a685929bff6d63aba.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/1fc99bafc8bfca7f95c4fbfcc7cd7cac.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/22f0e14668434eccfe744f9f11b45993.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/252118179157a790cd262ddde4c98132.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/29fef2b1149c8434d0aa1b712400e97a.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/2a176f6b3e8b3149d8a2d3f8a14af4a9.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/4883a5b9f31722b6be984483d341e220.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/82738046afe3e1b0651ff34157a2ce3c.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/8b01550e9d7d2f547a7cb9a4ca93d66c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/9655e9dcb99f373e26b62d94c7897392.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/9acaae876b2b0204f5180b66fecff260.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/9b7c4257139fa967263d0364af5cd12b.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/cf1484802032bc0728c00f33c5831646.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/d9e44cb5314c50af5674240f44a23ea5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/f5206dd335097328c8377a7749085a4a.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/fe265f44690b51374f9e983667573d20.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pdf/1dossierdecompetenceausy2020docx-6007485b931fd.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pdf/1dossierdecompetenceausy2020docx-60075b60f3c92.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pdf/1dossierdecompetenceausy2020docx-60075b8e35bee.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pdf/1dossierdecompetenceausy2020docx-60075bad58c70.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pdf/1dossierdecompetenceausy2020docx-60075bcabaad4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pdf/av_centrale-5ff32d1331b61.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pdf/av_centrale-5ff4e84da08c3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pdf/cvmatoselise-600748cf59e0e.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pdf/formulaireinscriptionadultes-5ff32cd20d57d.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pdf/formulaireinscriptionadultes-5ff336444fbb6.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pdf/formulaireinscriptionadultes-5ff4323a23f83.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pdf/formulaireinscriptionadultes-5ff436533c456.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pdf/formulaireinscriptionadultes-5ff4369eab4d1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pdf/formulaireinscriptionadultes-5ff4391e34139.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pdf/formulaireinscriptionadultes-5ff4e87d6e3dd.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pdf/quickdbdexport-60075b3c512d2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pdf/zb17700004greenwichuk-60075bed6587f.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/_footer.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/_navbar.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error403.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/KnpPaginatorBundle.fr.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/knitting_site.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/knitting_site.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/icons/add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/icons/logout-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/2d3ed2ff8513498a4169c7079b9252e3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/images/0411827c81a661c9cfdfc923c29bc6f7.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/4c73b0ebd637dd48c7988925e53013f1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/images/324c1e17aab24eba34270bef07284fb6.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/59c3d667fd15db212145cd58ec89f55c.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/76a449cfdbfc5121698b0f8583f0c5ea.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/images/4ade13c14b581cd8520fbcd7b4deba4e.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/a95149f17d932b3b0e0d8e7097288fdb.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/d02555359ce4f6839b023a523d3bb8b9.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/images/52579282b0fe7fbba4fa40e924e27cea.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/dda361f2b78858518495b3fe2254e77e.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/images/5797f50046e63e427a892e840890ad60.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/images/de7d1adb5f0ae4fb4ed51841bcbc2b29.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/images/7bee292dac2488748d78f9af43767064.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/featheredhat_flockfibrestudio-5fc81488a22be.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/featheredhat_flockfibrestudio-5fc8f28136ad8.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/featheredhat_flockfibrestudio-5fc9248d6e4c2.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/featheredhat_flockfibrestudio-5fc97c4c31366.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/featheredhat_flockfibrestudio-5fc97c95d1aa3.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/featheredhat_flockfibrestudio-5fca96d6512f3.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/pdf/featheredhat_flockfibrestudio-5fca97269d804.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PatternController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PatternController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Pattern.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Pattern.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CategoryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CategoryType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/PatternType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PatternType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/YarnType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/YarnType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PatternRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PatternRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pattern/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/_delete_form.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pattern/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pattern/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pattern/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pattern/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pattern/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pattern/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/yarn/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/yarn/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/yarn/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/yarn/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/yarn/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/yarn/new.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,16 +241,22 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
       <path value="$PROJECT_DIR$/vendor/doctrine/common" />
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
-      <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
       <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
       <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
       <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
-      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
       <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kshxcDpkcvHZiztl7SR7Uov2ZA" />
@@ -156,13 +265,19 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../orlours" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\wild\knitting_site\config" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\wild\knitting_site\public\uploads\icons" />
     </key>
@@ -190,6 +305,20 @@
       <workItem from="1607435211342" duration="6834000" />
       <workItem from="1607503314598" duration="14952000" />
       <workItem from="1607589469335" duration="12978000" />
+      <workItem from="1607621780685" duration="1295000" />
+      <workItem from="1607677811315" duration="10701000" />
+      <workItem from="1607958265277" duration="614000" />
+      <workItem from="1609228851232" duration="13315000" />
+      <workItem from="1609750054365" duration="6574000" />
+      <workItem from="1609761499769" duration="10100000" />
+      <workItem from="1609836460293" duration="20232000" />
+      <workItem from="1610050466085" duration="944000" />
+      <workItem from="1610052216891" duration="17000" />
+      <workItem from="1610103293028" duration="714000" />
+      <workItem from="1610119178132" duration="606000" />
+      <workItem from="1610213829665" duration="5201000" />
+      <workItem from="1610372150215" duration="4648000" />
+      <workItem from="1611072818615" duration="19244000" />
     </task>
     <task id="LOCAL-00001" summary="Entities Brand, Category, Pattern and Yarn created with their relations&#10;CRUD Pattern">
       <created>1606501967963</created>
@@ -254,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607610474488</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Edit pattern_new template">
+      <created>1607621849189</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607621849189</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +427,7 @@
     <MESSAGE value="Add pattern pdf" />
     <MESSAGE value="Add PatternSearchType fields : keyWord, category, skillLevel&#10;Add Administration" />
     <MESSAGE value="Add redirection to pattern_index on logout + home&#10;CSS Nav" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add redirection to pattern_index on logout + home&#10;CSS Nav" />
+    <MESSAGE value="Edit pattern_new template" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit pattern_new template" />
   </component>
 </project>

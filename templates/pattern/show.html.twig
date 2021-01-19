@@ -3,28 +3,29 @@
 {% block title %}Patron {{ pattern.category.name }} {{ pattern.name }}{% endblock %}
 
 {% block body %}
-    <div class="container-fluid">
-        <div class="row no-gutters">
-            <div class="col-sm-6">
-                <div class="card">
-                {% for image in pattern.images %}
-                    <img src="{{ asset('/uploads/images/' ~ image.name) }}" alt="Image" class="d-block">
-                {% endfor %}
+    <div class="container-fluid mt-5">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">{{ pattern.category.name }} {{ pattern.name }}</h3>
+                    <h6>Publié le {{ pattern.createdAt | date ("d/m/Y à H:i") }}</h6>
+                    <p class="card-text">
+                        {{ pattern.description }}
+                    </p>
+                    <a href="{{ asset('uploads/pdf/' ~ pattern.pdfFilename) }}" target="_blank">
+                        <img src="{{ asset('uploads/icons/pdf.png') }}" alt="pdf_icon" width="50">
+                    </a>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">{{ pattern.category.name }} {{ pattern.name }}</h3>
-                        <p class="card-text">
-                            {{ pattern.description }}
-                        </p>
-                            <a href="{{ asset('uploads/pdf/' ~ pattern.pdfFilename) }}" target="_blank">
-                                <img src="{{ asset('uploads/icons/pdf.png') }}" alt="pdf_icon" width="50">
-                            </a>
+    </div>
+    <div class="container-fluid mb-5">
+        <div class="row">
+            {% for image in pattern.images %}
+                <div class="col-md-6 col-lg-4 col-xl-3 py-3">
+                    <div class="card h-100">
+                        <img src="{{ asset('/uploads/images/' ~ image.name) }}" alt="Image" class="card-img">
                     </div>
                 </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

@@ -7,6 +7,8 @@ use App\Entity\Pattern;
 use App\Form\PatternType;
 use App\Form\SearchPatternType;
 use App\Repository\PatternRepository;
+use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -25,11 +27,16 @@ class PatternController extends AbstractController
      * @Route("/", name="pattern_index", methods={"GET"})
      * @param PatternRepository $patternRepository
      * @param Request $request
+     * @param PaginatorInterface $paginator
      * @return Response
      */
-    public function index(PatternRepository $patternRepository, Request $request): Response
+    public function index(PatternRepository $patternRepository, Request $request, PaginatorInterface $paginator): Response
     {
-        $patterns = $patternRepository->findPatternsByDateDESC();
+        $patterns = $paginator->paginate(
+            $patternRepository->findPatternsByDateDESCQuery(),
+            $request->query->getInt('page', 1),
+            8
+        );
         $form = $this->createForm(SearchPatternType::class);
         $search = $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()) {
@@ -76,23 +83,8 @@ class PatternController extends AbstractController
                 }
                 $pattern->setPdfFilename($newFilename);
             }
-            //Get uploaded images
             $images = $form->get('images')->getData();
-            //Loop through images
-            foreach($images as $image)
-            {
-                //Generate a new fileName
-                $file = md5(uniqid()) . '.' . $image->guessExtension();
-                //Save the file in the uploads directory
-                $image->move(
-                    $this->getParameter('images_directory'),
-                    $file
-                );
-                //Save the image name in the database
-                $img = new Image();
-                $img->setName($file);
-                $pattern->addImage($img);
-            }
+            $pattern = $this->setImages($images, $pattern);
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($pattern);
             $entityManager->flush();
@@ -133,22 +125,7 @@ class PatternController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             //Get uploaded images
-            $images = $form->get('images')->getData();
-            //Loop through images
-            foreach($images as $image)
-            {
-                //Generate a new fileName
-                $file = md5(uniqid()) . '.' . $image->guessExtension();
-                //Save the file in the uploads directory
-                $image->move(
-                    $this->getParameter('images_directory'),
-                    $file
-                );
-                //Save the image name in the database
-                $img = new Image();
-                $img->setName($file);
-                $pattern->addImage($img);
-            }
+            $this->setImages($form->get('images')->getData(), $pattern);
             $this->getDoctrine()->getManager()->flush();
             $this->addFlash('success', 'Les modifications apportées ont été enregistrées avec succès.');
 
@@ -187,7 +164,7 @@ class PatternController extends AbstractController
      * @param Request $request
      * @return JsonResponse
      */
-    public function deleteImage(Image $image, Request $request)
+    public function deleteImage(Image $image, Request $request): JsonResponse
     {
         $data = json_decode($request->getContent(), true);
         //Valid token check
@@ -206,5 +183,31 @@ class PatternController extends AbstractController
         } else {
             return new JsonResponse(['error' => 'Token Invalide'], 401);
         }
+    }
+
+    /**
+     * Get uploaded images
+     * @param $images
+     * @param $pattern
+     * @return Pattern
+     */
+    private function setImages($images , $pattern): Pattern
+    {
+        //Loop through images
+        foreach($images as $image)
+        {
+            //Generate a new fileName
+            $file = md5(uniqid()) . '.' . $image->guessExtension();
+            //Save the file in the uploads directory
+            $image->move(
+                $this->getParameter('images_directory'),
+                $file
+            );
+            //Save the image name in the database
+            $img = new Image();
+            $img->setName($file);
+            $pattern->addImage($img);
+        }
+        return $pattern;
     }
 }

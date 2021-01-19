@@ -24,21 +24,27 @@ class PatternType extends AbstractType
     {
         $builder
             ->add('name',TextType::class, [
-                'label' => 'Nom',
-                'help' => 'Un nom de moins de 20 charactères sans chiffre.'
+                'label' => false,
+                'help' => 'Moins de 20 caractères sans chiffre',
+                'attr' => [
+                    'placeholder' => 'Nom'
+                    ]
             ])
             ->add('description', TextareaType::class, [
-                'label' => 'Description'
+                'label' => false,
+                'attr' => [
+                    'placeholder' => 'Description'
+                ]
             ])
             ->add('skillLevel', ChoiceType::class, [
-                'label' => 'Niveau de difficulté',
-                'choices' => Pattern::SKILL_LEVEL
+                'label' => false,
+                'choices' => Pattern::SKILL_LEVEL,
+                'placeholder' => 'Niveau de difficulté'
             ])
             ->add('category', EntityType::class, [
-                'label' => 'Catégorie',
+                'label' => false,
                 'class' => Category::class,
-                'help' => 'Sélectionner une catégorie',
-                'placeholder' => false,
+                'placeholder' => 'Catégorie',
                 'choice_label' => 'name',
                 'query_builder' => function (CategoryRepository $categoryRepository) {
                     return $categoryRepository->createQueryBuilder('c')

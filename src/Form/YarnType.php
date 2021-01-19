@@ -15,10 +15,14 @@ class YarnType extends AbstractType
     {
         $builder
             ->add('name', TextType::class,[
-                'label' => 'Nom'
+                'label' => false,
+                'attr' => [
+                    'placeholder' => 'Nom'
+                ]
             ])
             ->add('weight', ChoiceType::class,[
-                'label' => 'Catégorie',
+                'label' => false,
+                'placeholder' => 'Catégorie',
                 'choices' => Yarn::YARN_WEIGHT
             ])
         ;
