@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="error-template">
+                    <h1>Oops!</h1>
+                    <div class="error-details">
+                        Nous sommes désolés. Une erreur s'est produite.
+                    </div>
+                    <a href="{{ path('pattern_index')}}"  class="btn btn-primary mt-5">Retour au catalogue</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Catalogue des patrons{% endblock %}
+
+{% block body %}
+    <div class="p-5">
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">{{ message }}</div>
+        {% endfor %}
+        <div class="jumbotron bg-light">
+            {{ form_start(form) }}
+            <div class="form-row align-items-end">
+                <div class="col-md-6 col-lg-3">
+                    {{ form_row(form.keyWord) }}
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    {{ form_row(form.category) }}
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    {{ form_row(form.skillLevel) }}
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="form-group">
+                        <button class="btn btn-outline-primary">Rechercher</button>
+                    </div>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+        {% if is_granted('ROLE_ADMIN') %}
+            <a class="btn btn-outline-primary m-3" href="{{ path('pattern_new') }}">Ajouter un patron</a>
+        {% endif %}
+        {% if patterns %}
+            <div class="container-fluid my-3">
+                <div class="row">
+                    {% for pattern in patterns %}
+                        <div class="col-md-6 col-lg-4 col-xl-3 py-3">
+                            <div class="card text-center h-100">
+                                <a style="color:black; text-underline-style: none" href="{{ path('pattern_show', {'id': pattern.id}) }}">
+                                    {% for image in pattern.images %}
+                                        {% if loop.first %}
+                                            <img src="{{ asset('uploads/images/' ~ image.name) }}"
+                                                 class="card-img-top"
+                                                 alt="#">
+                                        {% endif %}
+                                    {% endfor %}
+                                </a>
+                                <div class="card-body">
+                                    <h3 class="card-title">{{ pattern.category.name }} {{ pattern.name }}</h3>
+                                    {% if is_granted('ROLE_ADMIN') %}
+                                        <div class="card-text row align-items-baseline">
+                                            {{ include('pattern/_delete_form.html.twig') }}
+                                            <a href="{{ path('pattern_edit', {'id': pattern.id}) }}" class="col-6">
+                                                <img src="{{ asset('uploads/icons/pencil.png') }}" alt="delete_icon" width="25">
+                                            </a>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="pagination mb-5">
+                {{ knp_pagination_render(patterns) }}
+            </div>
+        {% else %}
+            <p class="mt-5">Aucun patron à afficher</p>
+        {% endif %}
+    </div>
+{% endblock %}
