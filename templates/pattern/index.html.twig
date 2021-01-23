@@ -61,9 +61,11 @@
                     {% endfor %}
                 </div>
             </div>
+            {% if searchBarUsed == false %}
             <div class="pagination mb-5">
                 {{ knp_pagination_render(patterns) }}
             </div>
+            {% endif %}
         {% else %}
             <p class="mt-5">Aucun patron à afficher</p>
         {% endif %}

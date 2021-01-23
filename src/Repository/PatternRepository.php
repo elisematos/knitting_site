@@ -37,10 +37,9 @@ class PatternRepository extends ServiceEntityRepository
      * @param null $keyWord
      * @param null $category
      * @param null $skillLevel
-     * @param null $yarnWeight
      * @return int|mixed|string
      */
-    public function search($keyWord = null, $category = null, $skillLevel = null, $yarnWeight = null){
+    public function search($keyWord = null, $category = null, $skillLevel = null){
         $query = $this->createQueryBuilder('p');
         if($keyWord != null){
             $query
