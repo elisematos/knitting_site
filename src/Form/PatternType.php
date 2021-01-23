@@ -68,7 +68,7 @@ class PatternType extends AbstractType
                 'attr' => [
                     'placeholder' => 'Patron au format pdf'],
                 'mapped' => false,
-                'required' => false,
+                'required' => true,
                 'constraints' => [
                     new File([
                         'maxSize' => '1M',
@@ -86,7 +86,7 @@ class PatternType extends AbstractType
                     'placeholder' => 'Images'],
                 'multiple' => true,
                 'mapped' => false,
-                'required' => false,
+                'required' => true,
             ])
         ;
     }

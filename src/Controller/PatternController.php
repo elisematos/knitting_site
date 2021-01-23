@@ -32,11 +32,7 @@ class PatternController extends AbstractController
      */
     public function index(PatternRepository $patternRepository, Request $request, PaginatorInterface $paginator): Response
     {
-        $patterns = $paginator->paginate(
-            $patternRepository->findPatternsByDateDESCQuery(),
-            $request->query->getInt('page', 1),
-            8
-        );
+        $searchBarUsed = false;
         $form = $this->createForm(SearchPatternType::class);
         $search = $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()) {
@@ -46,10 +42,17 @@ class PatternController extends AbstractController
                 $search->get('category')->getData(),
                 $search->get('skillLevel')->getData()
             );
-        }
+            $searchBarUsed = true;
+        } else {
+            $patterns = $paginator->paginate(
+            $patternRepository->findPatternsByDateDESCQuery(),
+            $request->query->getInt('page', 1),
+            8
+        );}
         return $this->render('pattern/index.html.twig', [
             'patterns' => $patterns,
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'searchBarUsed' => $searchBarUsed
         ]);
     }
 
